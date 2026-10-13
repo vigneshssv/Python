@@ -96,5 +96,60 @@
    - using the '#' tag to create a comment line
    - disable the python code we use for the '#' hash tag
 
-   
-   
+# List, Set, Tuple, Dictionary
+   ### Lists
+   - store multiple values and support for add, update, delete a values
+   - support for ordering(sorting)
+   - allow duplicate values
+   - support indexing
+   ```bash
+   numbers = [1,2,3]
+   numbers.append(4) # add a new value
+   number[0] = 4 # update a value
+   numbers.remove(3) #  remove a value
+   ```
+   ### tuple
+   - store a items and support ordering, indexing, allow duplicate values
+   - cannot modify values directly after create a tuple
+   - create new tuple, copy for the tuple to add, update, delete a values
+   ```bash
+   numbers = (1,2,3)
+   numbers[0] = 4 # raise error, not possible to update value
+   # create new tuple to modify existing one
+   numbers = numbers + (4,5,) #  add a new values result: (1,2,3,4,5)
+   # update and delete a tuple value
+   numbers = (1,2,3,5)
+   temp = lists(numbers) # convert a number variable tuple to list
+   temp[1] = 4 # change the value
+   temp.remove(3) # remove the value
+   numbers = tuple(temp) # convert the existing list into tuple once again
+   result: (1,4,3)
+   ```
+   ### set - () or {}
+    - store a unique values, remove duplicate values automatically
+    - does not support indexing
+    ```bash
+        numbers = {1,2,3}
+        numbers.add(4) # add new value
+        numbers.update([4,5]) #  add multiple values result: {1,2,3,4,5}
+        numbers.remove(3) # remove value, if value is not exists raise key error
+        numbers.discard(3) # remove a value safely, if value missing to its not raise error
+        numbers.pop() # remove value first like left to right
+        numbers.clear() # clear all values
+     ```
+   ### dictionary (object array)
+    - store value as key value {key: value}, same one like object array
+    - support add, update, delete a values
+    - using for data store user profile, api response, json data
+   ```bash
+   user = {
+  "name" : "vignesh",
+"age" : 22
+}
+user.name = 'raj' # update a value
+user.email = 'v@g.com' # add a value
+user.pop('name', none) # remove a key value, none - if value is not available to its not raise error
+user.popitem() # remove last key value
+   ```
+
+
