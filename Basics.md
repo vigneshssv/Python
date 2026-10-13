@@ -153,5 +153,18 @@
    user.pop('name', none) # remove a key value, none - if value is not available to its not raise error
    user.popitem() # remove last key value
    ```
+# Functions
+- Reusable block of code start with def keyword:
+```bash
+#sample code
+def numbers(a,b = 0):
+   return a+b, a*b
+
+a = int(input('no a:'))
+b = int(input('no b:'))
+
+addition, multi = numbers(a,b)
+print(addition, multi)
+```
 
 
