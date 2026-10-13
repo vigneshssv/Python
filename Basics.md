@@ -128,6 +128,7 @@
    ### set - () or {}
     - store a unique values, remove duplicate values automatically
     - does not support indexing
+    
     ```bash
         numbers = {1,2,3}
         numbers.add(4) # add new value
@@ -141,15 +142,16 @@
     - store value as key value {key: value}, same one like object array
     - support add, update, delete a values
     - using for data store user profile, api response, json data
+    
    ```bash
    user = {
-  "name" : "vignesh",
-"age" : 22
-}
-user.name = 'raj' # update a value
-user.email = 'v@g.com' # add a value
-user.pop('name', none) # remove a key value, none - if value is not available to its not raise error
-user.popitem() # remove last key value
+     "name" : "vignesh",
+   "age" : 22
+   }
+   user.name = 'raj' # update a value
+   user.email = 'v@g.com' # add a value
+   user.pop('name', none) # remove a key value, none - if value is not available to its not raise error
+   user.popitem() # remove last key value
    ```
 
 
