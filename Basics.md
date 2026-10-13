@@ -14,6 +14,18 @@
    print(a)
    result: 10
    ```
+   ### variable types
+    | Type        | Example                             | Description |
+    | :---        | :------                             | :---------- |
+    | int         | age = 25                            |             |
+    | str         | name = "vig"                        |             |
+    | float       | price = 22.5                        |             |
+    | bool        | status = True                       |             |
+    | list        | nums = [1,2,3]                      | ordered, changeable collection          |
+    | tuple       | nums = (1,2,3)                      | ordered, unchangeable collections           |
+    | set         | nums = {1,2,3}                      | collections of unique values            |
+    | dict        | user = {"name": "john", "age":25}   | key value pairs            |
+    | NoneType    | result = none                       |             |
    ### Boolean
    - True, False => start with capital letters only
    
@@ -68,14 +80,21 @@
    result: int
    ```
 # Convert DataType
-   int(a) = 3 converted for integer
-   str(a), float(a), int(True) => 1
-# pycharm
-   pycharm is a code editor same one like for vs code.
-   its available build in multiple library packages and used to run the py codes
-# comments
-   using the '#' tag to create a comment line
-   disable the python code we use for the '#' hash tag
+   - convert a data type for the variable directly using int(), str(), bool()
+   ```bash
+   a = 10
+   type(a) -> result int
+   a = str(a)
+   type(a)
+   result: str
+   ex: int(), str(), bool(), float() 
+   ```
+# pycharm (Code Editor)
+   - ycharm is a code editor same one like for vs code.
+   - its available build in multiple library packages and used to run the py codes
+# comments (#)
+   - using the '#' tag to create a comment line
+   - disable the python code we use for the '#' hash tag
 
    
    
