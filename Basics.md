@@ -126,8 +126,8 @@
    result: (1,4,3)
    ```
    ### set - () or {}
-    - store a unique values, remove duplicate values automatically
-    - does not support indexing
+   - store a unique values, remove duplicate values automatically
+   - does not support indexing
     
     ```bash
         numbers = {1,2,3}
@@ -139,9 +139,9 @@
         numbers.clear() # clear all values
      ```
    ### dictionary (object array)
-    - store value as key value {key: value}, same one like object array
-    - support add, update, delete a values
-    - using for data store user profile, api response, json data
+   - store value as key value {key: value}, same one like object array
+   - support add, update, delete a values
+   - using for data store user profile, api response, json data
     
    ```bash
    user = {
