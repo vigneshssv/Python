@@ -166,5 +166,67 @@ b = int(input('no b:'))
 addition, multi = numbers(a,b)
 print(addition, multi)
 ```
+# Conditions
+- if else, if elif else
+- using conditions like and, or, not
+  ```bash
+  number = 22
+  if number > 20 and number <= 40:
+     print('succ')
+  elif number > 55:
+     print('false')
+  else:
+     print('fail')
 
+  if not number < 19:
+     print('succ')
 
+  # nested if. if condition inside another if condition
+  if number > 20;
+    if number > 10 or number <= 15:
+       print('succ')
+    else:
+        print('fail')
+  else:
+     print('end')
+  # array find particular value
+  month = 'july'
+  if month in ['june', 'july','aug']:
+     print('succ')
+  else:
+     print('end')
+  ```
+# For loop
+   ```bash
+   for i in range(1,5): # print number 1 to 4
+      print(i)
+   # reverse order
+   for i in range(5,0, -1):
+      print(i)
+   result: 5,4,3,2,1
+   ```
+# While loop
+```bash
+i = 0
+while i <= 5:
+   print(i) # result: 1,2,3,4,5
+   i += 1 # increase a value
+#decrement
+i = 5
+while i >= 0:
+   print(i)
+   i -= 1
+result: 5,4,3,2,1
+```
+# Loop iteration in array
+```bash
+   numbers = [1,2,3,-1,-3]
+   arr = positive = []
+   for i in numbers:
+      if i <= 0:
+         arr.append(i)
+      else:
+         positive.append(i)
+
+   print('end')
+```
