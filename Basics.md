@@ -230,3 +230,48 @@ result: 5,4,3,2,1
 
    print('end')
 ```
+# Read and write a file
+- File read and write a new content
+- r => read, w => write
+- r+ => read and write, its not create new file
+- w+ => read and write but file not exists create a new file
+- a+ => read and append, create a new file
+```bash
+with open('file.txt',"r") as f:
+   for line in f:
+      print(line.rstrip())
+```
+# Python Module
+- you can reuse function, variable, classes in another python program
+  ## Build-in modules
+  - OS => Handle for operation system, file path
+  - math, random
+  ```bash
+  import os # import over all os
+   
+  if os.path.exists('file.txt'):
+     os.remove('file.txt')
+
+  # import separate modules
+  from os.path import exists # from os.path module inside available exists. we only import exists
+  from os import remove # from os to import remove module
+
+  if exists('file.txt'):
+     remove('file.txt')
+  ```
+  ## create own py module
+  - create a function in one py file and import it in another py file to use the function directly
+   ```bash
+   # user.py
+   def addition(a,b):
+      return a+b
+
+   def subtractions(a,b):
+      return a-b
+
+   # profile.py
+      from user import addition, subtractions
+       a = b = 2
+       res = addition(a,b)
+       print(res)
+   ```     
