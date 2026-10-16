@@ -337,4 +337,32 @@ with open('file.txt',"r") as f:
       user = User(animal)
       print(user.get_animal())  
    ```
-     
+# Error Handling
+- 2 types, syntax and run time error
+## syntax error
+- missing colon, conditions, spelling mistakes
+## run time error
+- write a code wrongly and raise for error code wise like a/2, a+2
+## Handle error
+   - try, exception, else, finally
+   - try => start to write a code, exception => handle error
+   - else => There is no error means its move automatically else condition
+   - false => success or failure its run end of the code
+   - exception types =>  ValueError, ZeroDivisionError, Exception
+   - raise Exception => throw the error for exception side
+```bash
+try:
+   a = int(input('no 1: '))
+   b = int(input('no 2: '))
+   if a < 0 or b < 0:
+      raise Exception("only positive nos")
+except ValueError:
+   print('enter proper numbers')
+except Exception as e: # raise exception error handled
+   print('exception', e)
+else:
+   z = a+b
+   print('z')
+finally:
+   print('Thank you')
+```
