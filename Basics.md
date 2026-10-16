@@ -274,4 +274,67 @@ with open('file.txt',"r") as f:
        a = b = 2
        res = addition(a,b)
        print(res)
-   ```     
+   ```
+   # OOPS
+   ## class, object, encapsulation, inheritance, polymorphism, abstraction
+    - collection of functions and variables
+    - __init__ is a construct function, self => this keyworkd
+    ```bash
+    class User:
+       def __init__(self, name, age):
+          self.name = name
+          self.age = age
+       def get_name():
+          return self.name
+
+    class Profile(User): # inheritance Profile extend User
+       def __init__(self, name, age):
+          super()._init__(name, age, username)
+          self.username = username # child class parameter
+
+       def get_name():
+          return self.name+' '+self.age # method overriding
+
+       def user_details():
+          return self.name+' '+self.age
+   
+    user = User("vig","22")
+    profile = Profile("raj", "21", "ram")
+
+    print(profile.user_details())
+    print(profile.get_name())
+    ```
+    ## Abstract Method
+    - from abc import ABC, abstractmethod, import the abstract class and method
+    - if abstract class there is no method means its also allow the python
+    ```bash
+    from abc import ABC, abstractmethod
+
+    class Animal(ABC):
+       # abstractmethod assign the function is mandatory to create for inherited class also
+       @abstractmethod
+       def pay():
+          pass or print('succ') # pass means not need to write any code
+
+    class User(Animal):
+       def pay(): # if we miss this function get error
+          print('succ')
+    ```
+  # Use a class inside another class
+  - class object pass as a parameter for another class construct function
+   ```bash
+      class Animal:
+         def pay(self):
+           return [1,2]
+
+      class User:
+         def __init__(self, animal):
+            self.animal = animal
+
+         def get_animal():
+            return self.animal.pay()
+      animal = Animal()
+      user = User(animal)
+      print(user.get_animal())  
+   ```
+     
