@@ -366,3 +366,43 @@ else:
 finally:
    print('Thank you')
 ```
+# Function parameters
+- pass normal and optional one
+```bash
+def newfunct(a,b,c=5):
+   print(a,b,c)
+newfunct(b=10,a=11,c=30) # pass a parameter position wrongly, but its assign values properly in the parameter 
+result: 11,10,30 # its automatically assign the values properly
+# pass multiple parameters
+def numbers(*marks): # collect all parameter and join single array
+   return marks
+
+numbers(1,2,3,4)
+result: (1,2,3,4)
+```
+# lambda functions
+- write a function small and single line using lambda keyword
+- lambda arguments: expression
+```bash
+# single line code
+lambda a,b:a+b (1,2)
+result: 3 # a,b arguments, a+b expression, (1,2) called the function
+# variable to call the function
+response = lambda a: "Even" if x%2 == 0 else "odd"
+print(response(1,2))
+result: 2
+```
+# lambda with map, filter, sorted
+## map
+```bash
+numbers = [1,2,3]
+res = list(map(lambda x:x*2,numbers))
+result: [2,4,6]
+```
+## filter
+res = list(filter(lambda x: x%2 == 0,numbers))
+result: [2]
+## sorted
+numbers = [('v',21), ('g',23), ('s',1)]
+res = sorted(numbers, key=lambda x:x[1])
+result: [('s',1), ('v',21), ('g',23)]
