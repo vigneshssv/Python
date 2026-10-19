@@ -425,3 +425,12 @@ print(x)
    show()
    print(y) # raise error, not possible to access local variable outside function
 
+   x = 10
+   def show():
+      global x
+      x = 22
+      print(x) # result 22, global x tell python to access inside x value as global one
+   def show():
+      x = 22 # local scope
+      res = globals()['x'] # access outside x value, get value for 10
+```
