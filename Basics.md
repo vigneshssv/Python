@@ -434,3 +434,47 @@ print(x)
       x = 22 # local scope
       res = globals()['x'] # access outside x value, get value for 10
 ```
+# Nested function (inner function)
+- function inside write another function
+- organize code, reuse logic, protect helper function from outside access
+- without argument to access outer function variable and do some calculations and conditions
+```bash
+def outer(n):
+   def inner():
+      nonlocal n # used to modify outer function variable, parameter
+      return n = n +1
+   return inner()
+
+res = outer(3)
+print(res) # result: 4
+#real time example
+def atm_withdrawal():
+   balance = 3000
+   actual_pin = 1234
+   def check_pin(pin):
+      return pin == actual_pin
+   def check_balance(amount):
+      return amount <= balance
+
+   pin = 1234
+   amount = 1000
+   if check_pin(pin):
+      if check_balance(amount):
+         return balance-amount
+      else:
+         return "Insufficient balance"
+   else:
+      return "wrong pin"
+
+atm_withdrawal()
+```
+# Closures
+- remember the outer function variable values, after the outer function finish the execution
+```bash
+   def outer(exp):
+      def inner(power):
+         return exp**power
+      return inner()
+   res = outer(5) # exp parameter value
+   print(res(3)) # power inner function parameter, result: 125, 5*5*5
+```
