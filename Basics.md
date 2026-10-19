@@ -406,3 +406,22 @@ result: [2]
 numbers = [('v',21), ('g',23), ('s',1)]
 res = sorted(numbers, key=lambda x:x[1])
 result: [('s',1), ('v',21), ('g',23)]
+
+# Global and local variable
+- global variable => declare variable in outside function, access outside and inside both
+- local variable => declare and access only inside function, not possible to access outside function
+```bash
+x = 10 # global variable
+
+def show():
+   print(x) # access global variable
+print(x)
+#local variable
+   x = 10
+   def show():
+      x = 20 # local variable
+      y = 30
+      print(x) # result: 20
+   show()
+   print(y) # raise error, not possible to access local variable outside function
+
