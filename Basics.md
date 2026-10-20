@@ -497,3 +497,10 @@ atm_withdrawal()
    res = greet(2,3)
    print(x) # res: func() called inside result is 5, return parameter values  result for 6
  ```
+# __name__ 
+- print a file name
+```bash
+x = __name__ # file name is main.py get result for __main__
+if x == "__main__"
+   print('succ')
+```
