@@ -478,3 +478,22 @@ atm_withdrawal()
    res = outer(5) # exp parameter value
    print(res(3)) # power inner function parameter, result: 125, 5*5*5
 ```
+# Decorators
+- function add or modify the behavior of another function without changing its original code
+- @ symbol to call the function as decorators function
+- pass function as parameter, used the parameter function codes inside
+- Inner function parameter pass based on decorator function
+ ```bash
+   def outer(func): # parameter as function
+      def inner(a,b): # get parameter values for 2,3 based on pass in greet function
+         print('succ')
+         func(a,b) # called the function greet, return result for 5
+         return a*b # without func() called return a*b means get result for 6
+      return inner
+
+   @outer # function called a decorator
+   def greet(a,b):
+      return a+b
+   res = greet(2,3)
+   print(x) # res: func() called inside result is 5, return parameter values  result for 6
+ ```
